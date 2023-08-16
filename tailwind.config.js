@@ -18,9 +18,13 @@ module.exports = {
         "50-custom": "50px",
         "800-custom": "800px",
         "110-custom": "110px",
+        "200-custom": "200px",
+        "250-custom": "250px",
+        "100-custom": "100px",
       },
       height: { 
         "30-custom": "30px",
+        'image-0': '250px',
         'image-1': '601px',
         'image-2': '452px',
         'image-3': '338px',
@@ -32,6 +36,12 @@ module.exports = {
         '150': '150px',
         '40': "40px",
         '30': "30px",
+        '50': "50px",
+        '80': "80px",
+        '100': "100px",
+        '70': "70px",
+        '18': "18px",
+        '0': "0px",
       },
       colors: {
         customText: '#1B5B31', 
@@ -42,9 +52,9 @@ module.exports = {
         '75': '75%',
         '1-3': 'calc(33.3333% - 1rem)',
         '100': '100px',
-        '80': '80px'
+        '80': '80px',
+        '0': '0px',
       },
-
       maxWidth: {
         '1-3': 'calc(33.3333% - 1rem)',
       },
@@ -54,6 +64,10 @@ module.exports = {
       },
       linearGradientDirections: {
         'custom': 'to bottom',
+      },
+      screens: {
+        'sm': '800px',
+        'md': '1200px',
       },
     },
   },
