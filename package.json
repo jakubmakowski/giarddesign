@@ -1,5 +1,14 @@
 {
+  "name": "giarddesign",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js",
+    "runserver": "node server.js"
+  },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "swiper": "^10.2.0"
   }
 }
