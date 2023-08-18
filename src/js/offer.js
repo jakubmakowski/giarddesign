@@ -1,44 +1,32 @@
-const toggleOffer = document.getElementById('toggleOffer');
-const dropdownList = document.getElementById('dropdownList');
+const toggleOffer = document.getElementById("toggleOffer");
+const dropdownList = document.getElementById("dropdownList");
+const sections = [
+  { trigger: "textProjects", content: "hiddenProjects" },
+  { trigger: "textVisualizations", content: "hiddenVisualizations" },
+  { trigger: "textRealizations", content: "hiddenRealizations" },
+];
 
-const textProjects = document.getElementById('textProjects');
-const hiddenProjects = document.getElementById('hiddenProjects');
-const textVisualizations = document.getElementById('textVisualizations');
-const hiddenVisualizations = document.getElementById('hiddenVisualizations');
-const textRealizations = document.getElementById('textRealizations');
-const hiddenRealizations = document.getElementById('hiddenRealizations');
+let isDropdownVisible = false;
 
-  let isDropdownVisible = false;
+toggleOffer.addEventListener("click", () => {
+  dropdownList.classList.toggle("hidden");
+  isDropdownVisible = !isDropdownVisible;
+});
 
-  toggleOffer.addEventListener('click', () => {
-    if (isDropdownVisible) {
-      dropdownList.classList.add('hidden');
-      isDropdownVisible = false;
-    } else {
-      dropdownList.classList.remove('hidden');
-      isDropdownVisible = true;
-    }
+document.addEventListener("click", (event) => {
+  const target = event.target;
+  if (!dropdownList.contains(target) && target !== toggleOffer) {
+    dropdownList.classList.add("hidden");
+    isDropdownVisible = false;
+  }
+});
+
+sections.forEach((section) => {
+  const triggerElement = document.getElementById(section.trigger);
+  const contentElement = document.getElementById(section.content);
+
+  triggerElement.addEventListener("click", () => {
+    contentElement.classList.toggle("max-h-0");
+    contentElement.classList.toggle("max-h-96");
   });
-
-  document.addEventListener('click', (event) => {
-    const target = event.target;
-    if (!dropdownList.contains(target) && target !== toggleOffer) {
-      dropdownList.classList.add('hidden');
-      isDropdownVisible = false;
-    }
-});
-
-textProjects.addEventListener('click', () => {
-    hiddenProjects.classList.toggle('max-h-0');
-    hiddenProjects.classList.toggle('max-h-96');
-});
-
-textVisualizations.addEventListener('click', () => {
-    hiddenVisualizations.classList.toggle('max-h-0');
-    hiddenVisualizations.classList.toggle('max-h-96');
-});
-
-textRealizations.addEventListener('click', () => {
-    hiddenRealizations.classList.toggle('max-h-0');
-    hiddenRealizations.classList.toggle('max-h-96');
 });

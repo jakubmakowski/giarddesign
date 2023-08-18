@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>giard design</title>
+  <meta name="description" content="giard design - Nowoczesna aranżacja Twojego ogrodu">
+  <meta name="author" content="Jakub Makowski">
+  <title>giarddesign</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../logo.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet" />
   <link href="../dist/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/global.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="./styles/global.css" rel="stylesheet">
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.3.0/dist/simpleParallax.min.js"></script>
 </head>
+
 <body>
+  <div id="spinner" class="spinner">
+    <div class="spinner-inner"></div>
+  </div>
   <div class="flex flex-col bg-custom-color-grey">
     <header class="fixed z-20 top-0 left-0 w-full font-montserrat bg-white">
       <nav class="flex md:ml-80 ml-30 md:mr-80 mr-30">
-        <h1 class="text-base font-bold py-5">giard
-          <span class="font-normal relative right-1">design</span>
-        </h1>
+        <button class="scroll-button" data-scroll-to="section4">
+          <h1 class="text-base font-bold py-5">giard
+            <span class="font-normal relative right-1">design</span>
+          </h1>
+        </button>
         <button class="sm:hidden block absolute right-8 top-5" id="toggleButton">
           <span class="w-6 h-1 bg-black mb-1 block"></span>
           <span class="w-6 h-1 bg-black mb-1 block"></span>
           <span class="w-6 h-1 bg-black mb-1 block"></span>
         </button>
-        <ul id="dropdownList" class="absolute top-[63px] left-0 bg-white rounded shadow-md hidden w-full">
+        <ul id="dropdownList" class="none-cursor absolute top-[63px] left-0 bg-white rounded shadow-md hidden w-full">
           <li class="md:ml-80 ml-30 md:mr-80 mr-30">Element 1</li>
           <li class="md:ml-80 ml-30 md:mr-80 mr-30">Element 2</li>
-          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Element 3</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30 pb-5">Element 3</li>
         </ul>
-        <ul id="toggleTarget" class="flex items-center absolute bg-white sm:top-0 top-[64px] sm:right-0 right-[-235px] sm:flex-row flex-col sm:p-0 p-10">
+        <ul id="toggleTarget"
+          class="flex items-center absolute bg-white sm:top-0 top-[64px] sm:right-0 right-[-235px] sm:flex-row flex-col sm:p-0 p-10">
           <div id="list" class="list-wrapperTwo flex bg-white sm:flex-row flex-col">
             <li id="toggleOffer" class="flex items-center mt-5 z-10 cursor-pointer sm:ml-5 ml-0">
               Oferta
-              <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M2.13017 4.81427C1.95661 4.6407 1.95661 4.3593 2.13017 4.18573C2.28796 4.02794 2.53487 4.0136 2.70887 4.1427L2.75871 4.18573L6 7.42681L9.24129 4.18573C9.39907 4.02794 9.64599 4.0136 9.81998 4.1427L9.86983 4.18573C10.0276 4.34352 10.042 4.59043 9.91286 4.76442L9.86983 4.81427L6.31427 8.36983C6.15648 8.52761 5.90957 8.54196 5.73558 8.41286L5.68573 8.36983L2.13017 4.81427Z"
                   fill="#111111" />
               </svg>
             </li>
             <li class="scroll-button mt-5 cursor-pointer sm:ml-5 ml-0" data-scroll-to="section1">O firmie</li>
-            <li class="scroll-button mt-5 cursor-pointer sm:ml-5 ml-0" data-scroll-to="hiddenOurProjects">Realizacje</li>
+            <li class="scroll-button mt-5 cursor-pointer sm:ml-5 ml-0" data-scroll-to="hiddenOurProjects">Realizacje
+            </li>
             <li class="scroll-button mt-5 cursor-pointer sm:ml-5 ml-0 mr-5" data-scroll-to="section2">Kontakt</li>
           </div>
-          <input class="mt-4 cursor-pointer bg-custom-color-grey p-[5px] text-xs" placeholder="Szukaj..." type="text"></input>
+          <input class="mt-4 cursor-pointer bg-custom-color-grey p-[5px] text-xs" placeholder="Szukaj..."
+            type="text"></input>
           <li id="toggleLeft" class="mt-5 md:mr-80 mr-30 cursor-pointer sm:ml-5 ml-0" id="searchIcon">
             <svg class="sm:ml-0 ml-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
               fill="none">
@@ -57,7 +73,7 @@
         </ul>
       </nav>
     </header>
-    <section class="flex sm:flex-row flex-col font-montserrat relative overflow-hidden w-full">
+    <section id="section4" class="flex sm:flex-row flex-col font-montserrat relative overflow-hidden w-full">
       <div class="absolute z-10 right-0 bottom-0 bg-custom-color-grey p-2">
         <button class="p-2" id="prevButton">
           <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
@@ -78,20 +94,18 @@
         <div class="swiper-wrapper h-full">
           <div class="swiper-slide flex items-center justify-center ">
             <div class="flex sm:flex-row flex-col h-full">
-              <div class="flex-col flex justify-center bg-custom-color-creme h-image-main sm:w-1/2 w-full">
+              <div class="flex-col flex justify-center bg-custom-color-creme h-image-main sm:w-1/2 w-full ">
                 <div class="flex flex-col sm:mt-0 mt-150 md:text-base text-xs md:ml-80 ml-30">
                   <h2 class="pb-10 md:text-6xl text-3xl">Nowoczesna<br />aranżacja<br />Twojego ogrodu</h2>
                   <p class="pr-5">Marka GiardDesign to wieloletnie doświadczenie i wysoka<br />estetyka realizacji.
                     Oferujemy
                     kompleksowy zakres usług<br />z indywidualnym podejściem do każdego projektu.</p>
                   <div class="flex md:flex-row flex-col mt-10">
-                    <button
-                      data-scroll-to="section2"
-                      class="scroll-button bg-custom-color-green p-3 rounded-3xl text-white mr-10 md:w-200-custom w-200-custom">Skontaktuj
+                    <button data-scroll-to="section2"
+                      class="scroll-button bg-custom-color-green p-3 rounded-3xl text-white mr-10 md:w-200-custom w-200-custom transform hover:bg-transparent hover:text-customBorderBottom border-2 border-customBorderBottom transition duration-300">Skontaktuj
                       się z nami</button>
-                    <button
-                      data-scroll-to="hiddenOurProjects"
-                      class="scroll-button flex justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom">Zobacz
+                    <button data-scroll-to="hiddenOurProjects"
+                      class="scroll-button flex justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom transform hover:bg-custom-color-green hover:text-white transition duration-300">Zobacz
                       nasze realizacje
                       <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
                         fill="none">
@@ -104,7 +118,7 @@
                 </div>
               </div>
               <div class="flex flex-col justify-center sm:w-1/2 w-full">
-                <img class="object-cover w-full sm:h-image-main h-image-3"
+                <img class="object-cover w-full sm:h-image-main h-image-3" loading="lazy"
                   src="https://www.figma.com/file/UWTCsdVS1JC4n6ePx6n8OJ/image/7f2775605005cc8dea4835ae282958a4c13cc9c0"
                   alt="garden">
               </div>
@@ -120,10 +134,10 @@
                     kompleksowy zakres usług<br />z indywidualnym podejściem do każdego projektu.</p>
                   <div class="flex md:flex-row flex-col mt-10">
                     <button
-                      class="bg-custom-color-green p-3 rounded-3xl text-white mr-10 md:w-200-custom w-200-custom">Skontaktuj
+                      class="scroll-button bg-custom-color-green p-3 rounded-3xl text-white mr-10 md:w-200-custom w-200-custom transform hover:bg-transparent hover:text-customBorderBottom border-2 border-customBorderBottom transition duration-300">Skontaktuj
                       się z nami</button>
                     <button
-                      class="flex justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom">Zobacz
+                      class="flex justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom transform hover:bg-custom-color-green hover:text-white transition duration-300">Zobacz
                       nasze realizacje
                       <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
                         fill="none">
@@ -136,7 +150,7 @@
                 </div>
               </div>
               <div class="flex flex-col justify-center sm:w-1/2 w-full">
-                <img class="object-cover w-full sm:h-image-main h-image-3"
+                <img class="object-cover w-full sm:h-image-main h-image-3" loading="lazy"
                   src="https://s3-alpha-sig.figma.com/img/5d1c/d9b9/1e56bc0d14c22b0ac5b9ae8e2bfbd5d1?Expires=1693180800&Signature=P3sBgWjZpZpgoFHqngv0MKQCEnuLpCuI3lXBGE~aAv3oNZXTWfqvPoRw-cE0nc8Hb~ilZl0NkyQxViP9Pb4AT2UarIRQ539xBg8b1mrHzTHIj9G0xPzMF5SMUvdJr02U7vakyEQqoG9R06~jf5yWVw0zhX-GB5AV28U9wK3UDhq50OrFwARQyd~9Uvlr2QVvc2FkDx2r0nErWSQGiwmJz5PmDd1Cgk~oePGifSsHOvfeuaB3BQShEMQ4sKSS2BLlolcUlp2edYAaP5LDFIo4X8meTIz5rnpvbjahWRtt8I6Lr9~BkpZ1uUVVglEXqBYcmr7CDO9o6sdsVl9YD2hTGg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                   alt="garden">
               </div>
@@ -152,10 +166,10 @@
                     kompleksowy zakres usług<br />z indywidualnym podejściem do każdego projektu.</p>
                   <div class="flex md:flex-row flex-col mt-10">
                     <button
-                      class="bg-custom-color-green p-3 rounded-3xl text-white mr-10 md:w-200-custom w-200-custom">Skontaktuj
+                      class="scroll-button bg-custom-color-green p-3 rounded-3xl text-white mr-10 md:w-200-custom w-200-custom transform hover:bg-transparent hover:text-customBorderBottom border-2 border-customBorderBottom transition duration-300">Skontaktuj
                       się z nami</button>
                     <button
-                      class="flex justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom">Zobacz
+                      class="flex justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom transform hover:bg-custom-color-green hover:text-white transition duration-300">Zobacz
                       nasze realizacje
                       <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
                         fill="none">
@@ -168,7 +182,7 @@
                 </div>
               </div>
               <div class="flex flex-col justify-center sm:w-1/2 w-full">
-                <img class="object-cover w-full sm:h-image-main h-image-3"
+                <img class="object-cover w-full sm:h-image-main h-image-3" loading="lazy"
                   src="https://s3-alpha-sig.figma.com/img/b00a/962e/56d48c9ca8fcabcc720d50ff6bafca47?Expires=1693180800&Signature=d3ZPp6VwjI9F~iGuAdjV06XQNOqZxKVg7~R7eyhIN9UKZ5uPdXaIc6p1Jq6jhy0dRGB40IxoHCwRcUcvGbsHvOs~5MZuAuNwKkJvBBexRRA-iX~L546d0EZUx0LoRxL4nq6MPfswOb2ViJJsVYI2r7v3pug6OzTIJ97mq2oUf~QDwdiYAF9Csjg~uiVRsEiLPnfxOWczYjnTpU~3wmDXA4PV0qBk~aEwclOUX5Qh7J87RD3LGiv2RRSUPxQettUmNoc7JQhAFXpveJ~gXihuUmI8pmVVUIXLoMxFIX9WBWNx2ebBcqCfie~vJuHs1JJjOzHzkNo~9KMzUt46thqGAQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                   alt="garden">
               </div>
@@ -180,7 +194,7 @@
     <section class="flex justify-center flex-col w-full font-montserrat">
       <div class="flex flex-col md:text-base text-xs md:m-150 m-20">
         <p>Oferta</p>
-        <h2 class="flex pb-10 mt-5 md:text-6xl text-3xl sm:flex-row flex-col">Działamy <span
+        <h2 class="flex pb-10 mt-5 md:text-6xl text-3xl sm:flex-row flex-col">Działamy&nbsp;<span
             class="font-inter italic">kompleksowo</span></h2>
         <p class="mt-5">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody
           przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na
@@ -189,105 +203,114 @@
       <div
         class="flex md:items-start items-center md:flex-row flex-col md:text-base text-xs md:ml-80 ml-30 md:mr-80 mr-30">
         <div class="flex flex-col p-4 bg-white rounded-2xl pt-10 pb-10 md:mb-0 mb-5 md:w-1/3 w-full md:mr-10 mr-0">
-          <img class="w-30-custom h-30-custom mb-5"
+          <img class="w-30-custom h-30-custom mb-5" loading="lazy"
             src="https://www.figma.com/file/UWTCsdVS1JC4n6ePx6n8OJ/image/04512d149295b2da873c8c161053e4e251b5be48"
             alt="pencil"></img>
           <h3 class="font-semibold">Projekty</h3>
           <p class="mt-1">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej
             przestrzeni.</p>
-          <button id="textProjects" class="flex items-center text-customText mt-10">
+          <button id="textProjects" class="flex items-center text-customText mt-10 hover:translate-svg">
             <span class="flex border-b-2 border-customBorderBottom relative mr-1 pb-1">
               <span class="pr-1">Dowiedz się więcej</span>
-              <svg class="ml-2 relative md:top-1.5 top-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                viewBox="0 0 16 16" fill="none">
+              <svg class="ml-2 relative md:top-1.5 top-0 transition-transform duration-300"
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
                   fill="#1B5B31" />
               </svg>
             </span>
           </button>
-          <div id="hiddenProjects" class="rounded-2xl overflow-hidden max-h-0 transition-max-height duration-1000 bg-custom-color-grey p-0 mt-5">
+          <div id="hiddenProjects"
+            class="rounded-2xl overflow-hidden max-h-0 transition-max-height duration-1000 bg-custom-color-grey p-0 mt-5">
             <div class="p-5">
-              <p>Treść ukrytego diva 3</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
             </div>
           </div>
         </div>
         <div
           class="flex flex-col w-1/3 p-4 bg-white rounded-2xl pt-10 pb-10 md:mb-0 mb-5 md:w-1/3 w-full md:mr-10 mr-0">
-          <img class="w-50-custom h-30-custom mb-5" src="./assets/eye.png" alt="eye"></img>
+          <img class="w-50-custom h-30-custom mb-5" src="./assets/eye.png" loading="lazy" alt="eye"></img>
           <h3 class="font-semibold">Wizualizacje</h3>
           <p class="mt-1">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej
             przestrzeni.</p>
-          <button id="textVisualizations" class="flex items-center text-customText mt-10 ">
+          <button id="textVisualizations" class="flex items-center text-customText mt-10 hover:translate-svg">
             <span class="flex border-b-2 border-customBorderBottom relative mr-1 pb-1">
               <span class="pr-1">Dowiedz się więcej</span>
-              <svg class="ml-2 relative md:top-1.5 top-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                viewBox="0 0 16 16" fill="none">
+              <svg class="ml-2 relative md:top-1.5 top-0 transition-transform duration-300"
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
                   fill="#1B5B31" />
               </svg>
             </span>
           </button>
-          <div id="hiddenVisualizations" class=" rounded-2xl overflow-hidden max-h-0 transition-max-height duration-1000 bg-custom-color-grey p-0 mt-5">
+          <div id="hiddenVisualizations"
+            class=" rounded-2xl overflow-hidden max-h-0 transition-max-height duration-1000 bg-custom-color-grey p-0 mt-5">
             <div class="p-5">
-              <p>Treść ukrytego diva</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
             </div>
           </div>
         </div>
         <div class="flex flex-col w-1/3 p-4 bg-white rounded-2xl pt-10 pb-10 md:mb-0 mb-5 md:w-1/3 w-full">
-          <img class="w-30-custom h-30-custom mb-5"
+          <img class="w-30-custom h-30-custom mb-5" loading="lazy"
             src="https://www.figma.com/file/UWTCsdVS1JC4n6ePx6n8OJ/image/14d1db7b96f1122f83f61a20dc5ce2d136805235"
             alt="stars"></img>
           <h3 class="font-semibold">Realizacje</h3>
           <p class="mt-1">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej
             przestrzeni.</p>
-          <button id="textRealizations" class="flex items-center text-customText mt-10">
+          <button id="textRealizations" class="flex items-center text-customText mt-10 hover:translate-svg">
             <span class="flex border-b-2 border-customBorderBottom relative mr-1 pb-1">
               <span class="pr-1">Dowiedz się więcej</span>
-              <svg class="ml-2 relative md:top-1.5 top-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                viewBox="0 0 16 16" fill="none">
+              <svg class="ml-2 relative md:top-1.5 top-0 transition-transform duration-300"
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
                   fill="#1B5B31" />
               </svg>
             </span>
           </button>
-          <div id="hiddenRealizations" class="rounded-2xl overflow-hidden max-h-0 transition-max-height duration-1000 bg-custom-color-grey p-0 mt-5">
+          <div id="hiddenRealizations"
+            class="rounded-2xl overflow-hidden max-h-0 transition-max-height duration-1000 bg-custom-color-grey p-0 mt-5">
             <div class="p-5">
-              <p>Treść ukrytego diva</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
-              <p>Możesz tutaj dodać więcej treści</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
+              <p>Treść</p>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section
-      id="section1"
-      class="flex bg-custom-color-green min-h-screen font-montserrat md:text-base text-xs sm:flex-row flex-col md:mt-150 mt-70">
+      class="flex min-h-screen bg-custom-color-green font-montserrat md:text-base text-xs sm:flex-row flex-col md:mt-150 mt-70">
       <div class="w-1/2 flex-col flex justify-center sm:w-1/2 w-full">
-        <img class="object-cover w-full sm:h-full h-image-3"
-          src="https://www.figma.com/file/UWTCsdVS1JC4n6ePx6n8OJ/image/df399fbc7d2d02daccea22da3a5cc9d56fd014d8"
-          alt="house">
+        <div class="parallax-section">
+          <div class="parallax-background overflow-hidden bg-custom-color-grey">
+            <img class="w-full object-cover sm:h-cutomGradient h-image-5 parallax-img" loading="lazy"
+              src="https://www.figma.com/file/UWTCsdVS1JC4n6ePx6n8OJ/image/df399fbc7d2d02daccea22da3a5cc9d56fd014d8"
+              alt="Parallax Background">
+          </div>
+        </div>
       </div>
-      <div class="flex-col flex justify-center sm:w-1/2 w-full">
+      <div id="section1" class="flex-col flex justify-center sm:w-1/2 w-full">
         <div class="flex flex-col justify-end text-white pl-20 md:mr-80 mr-30">
           <p class="mb-8 pt-10">O firmie</p>
           <h2 class="mb-8 md:text-6xl text-3xl">Tworzymy<br /><span class="font-inter italic">z pasją</span></h2>
@@ -296,9 +319,11 @@
             nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe,
             dostosowane do współczesnego trybu życia.</p>
           <div class="flex mt-10">
-            <button class="flex items-center p-3 rounded-3xl text-white mr-10 mt-8 border mb-10">Poznaj nas bliżej
-              <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                fill="none">
+            <button data-scroll-to="section3"
+              class="scroll-button flex items-center p-3 rounded-3xl text-white mr-10 mt-8 border mb-10 hover:translate-svg">
+              Poznaj nas bliżej
+              <svg class="ml-2 transition-transform duration-300 transform hover:translate-x-5"
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
                   fill="#F5F0EC" />
@@ -308,9 +333,11 @@
         </div>
       </div>
     </section>
-    <section id="hiddenOurProjects" class="projects-wrapperTwo relative flex flex-col bg-custom-color-creme font-montserrat overflow-hidden md:text-base text-xs">
+    <section id="hiddenOurProjects"
+      class="projects-wrapperTwo relative flex flex-col bg-custom-color-creme font-montserrat overflow-hidden md:text-base text-xs">
       <div id="gradient" class="gradient-transitionTwo flex justify-center items-end text-black pb-10 pt-10">
-        <button id="showProjects" class="flex items-center justify-center p-3 rounded-3xl border border-black relative z-20">Rozwiń
+        <button id="showProjects"
+          class="flex items-center justify-center p-3 rounded-3xl border border-black relative z-20 bg-transparent hover:bg-custom-color-creme transition duration-300">Rozwiń
           <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
             <path
               d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
@@ -321,53 +348,63 @@
       <div class="flex justify-center items-end text-black pb-20"></div>
       <div class="flex flex-col md:m-100 m-10 md:pt-0 pt-5">
         <p class="text-customText mb-0">Realizacje</p>
-        <h3 class="flex mb-0 md:text-6xl text-3xl sm:flex-row flex-col">Nasze <span
+        <h3 class="flex mb-0 md:text-6xl text-3xl sm:flex-row flex-col">Nasze&nbsp;<span
             class="font-inter italic">projekty</span></h3>
       </div>
       <div class="flex flex-wrap justify-between relative sm:flex-row flex-col">
         <div id="myModal" class="modal">
           <div class="modal-content">
             <span id="closeModal" class="close">&times;</span>
-            <img id="modalImage" src="" alt="Modal Image">
+            <img id="modalImage" src="" alt="Modal Image" loading="lazy">
           </div>
         </div>
         <div class="flex flex-wrap justify-between sm:max-w-[calc(33.3%-20px)] max-w-100%">
           <button class="open-modal flex w-full">
-            <img class="mt-30 w-full object-cover sm:h-image-1 h-image-0" src="https://s3-alpha-sig.figma.com/img/5d1c/d9b9/1e56bc0d14c22b0ac5b9ae8e2bfbd5d1?Expires=1693180800&Signature=P3sBgWjZpZpgoFHqngv0MKQCEnuLpCuI3lXBGE~aAv3oNZXTWfqvPoRw-cE0nc8Hb~ilZl0NkyQxViP9Pb4AT2UarIRQ539xBg8b1mrHzTHIj9G0xPzMF5SMUvdJr02U7vakyEQqoG9R06~jf5yWVw0zhX-GB5AV28U9wK3UDhq50OrFwARQyd~9Uvlr2QVvc2FkDx2r0nErWSQGiwmJz5PmDd1Cgk~oePGifSsHOvfeuaB3BQShEMQ4sKSS2BLlolcUlp2edYAaP5LDFIo4X8meTIz5rnpvbjahWRtt8I6Lr9~BkpZ1uUVVglEXqBYcmr7CDO9o6sdsVl9YD2hTGg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+            <img loading="lazy" class="mt-30 w-full object-cover sm:h-image-1 h-image-0 bg-custom-color-grey"
+              src="https://s3-alpha-sig.figma.com/img/5d1c/d9b9/1e56bc0d14c22b0ac5b9ae8e2bfbd5d1?Expires=1693180800&Signature=P3sBgWjZpZpgoFHqngv0MKQCEnuLpCuI3lXBGE~aAv3oNZXTWfqvPoRw-cE0nc8Hb~ilZl0NkyQxViP9Pb4AT2UarIRQ539xBg8b1mrHzTHIj9G0xPzMF5SMUvdJr02U7vakyEQqoG9R06~jf5yWVw0zhX-GB5AV28U9wK3UDhq50OrFwARQyd~9Uvlr2QVvc2FkDx2r0nErWSQGiwmJz5PmDd1Cgk~oePGifSsHOvfeuaB3BQShEMQ4sKSS2BLlolcUlp2edYAaP5LDFIo4X8meTIz5rnpvbjahWRtt8I6Lr9~BkpZ1uUVVglEXqBYcmr7CDO9o6sdsVl9YD2hTGg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
           </button>
           <button class="open-modal flex w-full">
-            <img class="mt-30 w-full object-cover sm:h-image-2 h-image-0" src="https://s3-alpha-sig.figma.com/img/da0b/6735/aad8b99dcbc4dbc394b9e74465d2ed25?Expires=1693180800&Signature=IRhGTNLUOmBHKSU5TPtd5-bJeAVnsLbObmmey0oPQAQyrOUOCuUZaWJmKZ1sHMMoBrdlk40Nz2MZj16hcPK~TCNEIzZnpO0Mg3pxgauOYm6Ht6eUy4FHRhiwQHZXKIIrx7jquDCHFKuKEvEtThLe4B1fFeAzSvyVkGLUIlM7OlFAiCHU5UQ7DRBh-fy4dnCmaRSIAfc3d4ci5Np~ZbUk99hINl9rLSP7tgzVeJAMPyDP-EAiAmyGWBWyGU8cdqh2Thv7aZU4v0cICbiuf3Qaw7n~Y5UhepygcHH~hdKnOnYrlOptmB5Q6pxpinDfWKccT8iGe7ljeHqqizyV9cczZg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+            <img loading="lazy" class="mt-30 w-full object-cover sm:h-image-2 h-image-0 bg-custom-color-grey"
+              src="https://s3-alpha-sig.figma.com/img/da0b/6735/aad8b99dcbc4dbc394b9e74465d2ed25?Expires=1693180800&Signature=IRhGTNLUOmBHKSU5TPtd5-bJeAVnsLbObmmey0oPQAQyrOUOCuUZaWJmKZ1sHMMoBrdlk40Nz2MZj16hcPK~TCNEIzZnpO0Mg3pxgauOYm6Ht6eUy4FHRhiwQHZXKIIrx7jquDCHFKuKEvEtThLe4B1fFeAzSvyVkGLUIlM7OlFAiCHU5UQ7DRBh-fy4dnCmaRSIAfc3d4ci5Np~ZbUk99hINl9rLSP7tgzVeJAMPyDP-EAiAmyGWBWyGU8cdqh2Thv7aZU4v0cICbiuf3Qaw7n~Y5UhepygcHH~hdKnOnYrlOptmB5Q6pxpinDfWKccT8iGe7ljeHqqizyV9cczZg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
           </button>
           <button class="open-modal flex w-full">
-            <img class="mt-30 w-full object-cover sm:h-image-3 h-image-0" src="https://s3-alpha-sig.figma.com/img/44c5/e718/7084bf1c5c4627a274b27b4b0c39a7ea?Expires=1693180800&Signature=Rf2xr69bZS~NJgCLJqPAHivWYHfNL3rPQQMnHKSt3tt-~e3Lq9wviE2JG0sa48H7EiS4cHotqXuwd3QpMzo4-AGOOEL79dzwTs8fRrv8SQgzgpfXO66IbiJMgpPW9mDITmbR1RmArQ6juZL4W6o442RREPKpUw-LzMcbCWUr4UQLb3tw2wlc-UcaLXlJhGJVQA9Weoz8NeT~DKqJZerio7bKXea8dkqIewGht70-47RnZl06gudw~TCPeldaYpA9-WmGZ9ZijbqdUGLSzlN4oeT-iQIHNIhEFFVsarioIQ5-qVD7x-LV~TLJiHGg14fXWZaObcPq6KzCLJjlD-RVXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-          </button>
-        </div>
-        <div class="flex flex-wrap justify-between sm:max-w-[calc(33.3%-20px)] max-w-100%">
-          <button class="open-modal flex w-full">
-            <img class="mt-30 w-full object-cover sm:h-image-3 h-image-0" src="https://s3-alpha-sig.figma.com/img/e595/eff0/256fb3185fa1a312c58e3e6d0335d0a5?Expires=1693180800&Signature=BvkWU-OGtVnl1jxNOZ3Er4jX6-m0zEcslrjYGXxXmHLlFy4zvUnQUH4RLlZ5i-O6ocNhH7DM323CrK3-HsRouYRTfyudiQ3eZ0~vEDZFqrNHP3chGN6CYhefGKlyl45ox6ryj8ScDlFrLAIKcbcLDOQvYDVOMdBo5EVnp~ckcB4abH2NiPGU5aCeyCz5f5cfiKGwqRmsvNumFO5EeApHV1fgHv2jRdbcO13nK~ypPK4ZnkxWwO1PncjxUPuVBThLABUlBAO~psNTqN9oRDMHDDI7NH~hF7tPLUICpZtw976MdXijmsad15VGuc~9iWxpR4EwVisZiS7mmb~GSB79cw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-          </button>
-          <button class="open-modal flex w-full">
-            <img class="mt-30 w-full object-cover sm:h-image-2 h-image-0" src="https://s3-alpha-sig.figma.com/img/24d7/efa5/a3c1f2854e87a31e5a248352efa0b04f?Expires=1693180800&Signature=fhhOVc-Qi8f4mnrjXo~e42hkPu-TorHkbq6adlRnRJxfs0M9gNPND~zN3jTnzDTEVrNWAAdu09WCOk65gEIpxaxZ5r9khMsXdIo35Db61BWVgbZ5Oiy6yJrGAQHiDbVGCpJxETiNQ1tKqbKD~hC7M3OnaXKronhDgtFdw7sAjV4xw0TIm8ZjNRtXrGBdVmn-G1qQVdPrPSytSIjElzHkB6heQvvzjOeYtFPAPn5nSyYGWAP2YILJEwkcYxBBh4hft-AD~BZpDJRhLlpMqZSxNG6UDFflwlyA3b4gpbq1mAQ8Hu73p9m6d0RrUbM750FVgv5GHUa7t5TpRqM19pMU~A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-          </button>
-          <button class="open-modal flex w-full">
-            <img class="mt-30 w-full object-cover sm:h-image-1 h-image-0" src="https://s3-alpha-sig.figma.com/img/0d71/3440/f1fc432e493a7d90348f7b35f9ad85ae?Expires=1693180800&Signature=jqS6LAg60bBh~Y3-WmJ-I~yyKVVUWrhISkB3KWsv~C~26wFbOhvvvOJPhwjkBRL-polHKg5n74pqn77COv7g38tkABbY7y7SIdbngVVwEUxFjHET9f5ZLTXjwPT9IDDOhrFJWQUhtW6t~D8OyGKMg~U-YgXfFG~fOtjoK0EYZCFn8GvlFjhX2e~b4RKccPSROojYGUxEWJ2tI95UA2eOFwjXkGgjPruIcqE~X6qaSqjDeud6QEHIt07YOz6elSXyMjqbZ8lG3kZTUASpIHjIcShej5lloEIJW9nsx8FuPt1TdYA5wLwDxFYEvv1cQ165TRnponyBxBNYlb2M2sMc4w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+            <img loading="lazy" class="mt-30 w-full object-cover sm:h-image-3 h-image-0 bg-custom-color-grey"
+              src="https://s3-alpha-sig.figma.com/img/44c5/e718/7084bf1c5c4627a274b27b4b0c39a7ea?Expires=1693180800&Signature=Rf2xr69bZS~NJgCLJqPAHivWYHfNL3rPQQMnHKSt3tt-~e3Lq9wviE2JG0sa48H7EiS4cHotqXuwd3QpMzo4-AGOOEL79dzwTs8fRrv8SQgzgpfXO66IbiJMgpPW9mDITmbR1RmArQ6juZL4W6o442RREPKpUw-LzMcbCWUr4UQLb3tw2wlc-UcaLXlJhGJVQA9Weoz8NeT~DKqJZerio7bKXea8dkqIewGht70-47RnZl06gudw~TCPeldaYpA9-WmGZ9ZijbqdUGLSzlN4oeT-iQIHNIhEFFVsarioIQ5-qVD7x-LV~TLJiHGg14fXWZaObcPq6KzCLJjlD-RVXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
           </button>
         </div>
         <div class="flex flex-wrap justify-between sm:max-w-[calc(33.3%-20px)] max-w-100%">
           <button class="open-modal flex w-full">
-            <img class="mt-30 w-full object-cover sm:h-image-4 h-image-0" src="https://s3-alpha-sig.figma.com/img/b00a/962e/56d48c9ca8fcabcc720d50ff6bafca47?Expires=1693180800&Signature=d3ZPp6VwjI9F~iGuAdjV06XQNOqZxKVg7~R7eyhIN9UKZ5uPdXaIc6p1Jq6jhy0dRGB40IxoHCwRcUcvGbsHvOs~5MZuAuNwKkJvBBexRRA-iX~L546d0EZUx0LoRxL4nq6MPfswOb2ViJJsVYI2r7v3pug6OzTIJ97mq2oUf~QDwdiYAF9Csjg~uiVRsEiLPnfxOWczYjnTpU~3wmDXA4PV0qBk~aEwclOUX5Qh7J87RD3LGiv2RRSUPxQettUmNoc7JQhAFXpveJ~gXihuUmI8pmVVUIXLoMxFIX9WBWNx2ebBcqCfie~vJuHs1JJjOzHzkNo~9KMzUt46thqGAQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+            <img loading="lazy" class="mt-30 w-full object-cover sm:h-image-3 h-image-0 bg-custom-color-grey"
+              src="https://s3-alpha-sig.figma.com/img/e595/eff0/256fb3185fa1a312c58e3e6d0335d0a5?Expires=1693180800&Signature=BvkWU-OGtVnl1jxNOZ3Er4jX6-m0zEcslrjYGXxXmHLlFy4zvUnQUH4RLlZ5i-O6ocNhH7DM323CrK3-HsRouYRTfyudiQ3eZ0~vEDZFqrNHP3chGN6CYhefGKlyl45ox6ryj8ScDlFrLAIKcbcLDOQvYDVOMdBo5EVnp~ckcB4abH2NiPGU5aCeyCz5f5cfiKGwqRmsvNumFO5EeApHV1fgHv2jRdbcO13nK~ypPK4ZnkxWwO1PncjxUPuVBThLABUlBAO~psNTqN9oRDMHDDI7NH~hF7tPLUICpZtw976MdXijmsad15VGuc~9iWxpR4EwVisZiS7mmb~GSB79cw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
           </button>
           <button class="open-modal flex w-full">
-            <img class="mt-30 w-full object-cover sm:h-image-5 h-image-0" src="https://s3-alpha-sig.figma.com/img/d23c/13bb/0b23a825357426c98af6bc74c90b66a0?Expires=1693180800&Signature=PHIcZitwB12IwI926rsszddq2iAEdfw7FVSrbGcxA25gpL4yAkUvWgUtBTljZU3W9D-w0yz21udXuOdbKlLgDZ8pNGwa-pEh7BsBI79NKS-1VTU0BG75s7WFt-Z83EV9ugA5YQQaxys2AGuSa9FOSryOxLW1ygdznq0zxPPI1awMSrbaWgnJAf97H4Y1YK0ERZ2gwrklruxvUc5rjk3ycMZAIdBhNY4MeW3tNP0uwhwuOsK-vX7txs81np~A4Z5REa~jH8JfrHBgbzrhiS-L1L5PAYxN2hHx9d2eOi68WmcOTdFpe56PcPWzoz1iYQ0LPbLQrDIM6cne5mV2Md10KQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+            <img loading="lazy" class="mt-30 w-full object-cover sm:h-image-2 h-image-0 bg-custom-color-grey"
+              src="https://s3-alpha-sig.figma.com/img/24d7/efa5/a3c1f2854e87a31e5a248352efa0b04f?Expires=1693180800&Signature=fhhOVc-Qi8f4mnrjXo~e42hkPu-TorHkbq6adlRnRJxfs0M9gNPND~zN3jTnzDTEVrNWAAdu09WCOk65gEIpxaxZ5r9khMsXdIo35Db61BWVgbZ5Oiy6yJrGAQHiDbVGCpJxETiNQ1tKqbKD~hC7M3OnaXKronhDgtFdw7sAjV4xw0TIm8ZjNRtXrGBdVmn-G1qQVdPrPSytSIjElzHkB6heQvvzjOeYtFPAPn5nSyYGWAP2YILJEwkcYxBBh4hft-AD~BZpDJRhLlpMqZSxNG6UDFflwlyA3b4gpbq1mAQ8Hu73p9m6d0RrUbM750FVgv5GHUa7t5TpRqM19pMU~A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
           </button>
           <button class="open-modal flex w-full">
-            <img class="mt-30 w-full object-cover sm:h-image-3 h-image-0 sm:mb-0 mb-[130px]" src="https://s3-alpha-sig.figma.com/img/e209/1e78/d41f16c4301e5a7dfaeb13b24470a429?Expires=1693180800&Signature=gVCIxGLGbiPPw4kDNByl2~7B45vvjO-WZ~QBrox~JUtKgZnH~GjCLtlUKJcTXaeFWPbdz-wphI1wrAnats2FXR8tJh5VLVIwxJK8TL04p0RJ8Zb~dmKieWyGSvLwzzbLvPnbxADZOwJX-XFIW-TeQqgqZVaT2as9nTDu4pOAUQQTaD6aGTKBRhc~UQqZuXAmv61NDbtcgA4DrL511BF4XZszYP-CZGJbGDVN-lqOKL5zWLMM0VI6UbtOvlzfVxfUwxh0FbYe8nukN63x~3qPQhfcEH8RP~mcldvaZQMUbZId03DJf7NmQBM3WR500rC6l-XD-fA8jpdGXWAPIIsirA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+            <img loading="lazy" class="mt-30 w-full object-cover sm:h-image-1 h-image-0 bg-custom-color-grey"
+              src="https://s3-alpha-sig.figma.com/img/0d71/3440/f1fc432e493a7d90348f7b35f9ad85ae?Expires=1693180800&Signature=jqS6LAg60bBh~Y3-WmJ-I~yyKVVUWrhISkB3KWsv~C~26wFbOhvvvOJPhwjkBRL-polHKg5n74pqn77COv7g38tkABbY7y7SIdbngVVwEUxFjHET9f5ZLTXjwPT9IDDOhrFJWQUhtW6t~D8OyGKMg~U-YgXfFG~fOtjoK0EYZCFn8GvlFjhX2e~b4RKccPSROojYGUxEWJ2tI95UA2eOFwjXkGgjPruIcqE~X6qaSqjDeud6QEHIt07YOz6elSXyMjqbZ8lG3kZTUASpIHjIcShej5lloEIJW9nsx8FuPt1TdYA5wLwDxFYEvv1cQ165TRnponyBxBNYlb2M2sMc4w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+          </button>
+        </div>
+        <div class="flex flex-wrap justify-between sm:max-w-[calc(33.3%-20px)] max-w-100%">
+          <button class="open-modal flex w-full">
+            <img loading="lazy" class="mt-30 w-full object-cover sm:h-image-4 h-image-0 bg-custom-color-grey"
+              src="https://s3-alpha-sig.figma.com/img/b00a/962e/56d48c9ca8fcabcc720d50ff6bafca47?Expires=1693180800&Signature=d3ZPp6VwjI9F~iGuAdjV06XQNOqZxKVg7~R7eyhIN9UKZ5uPdXaIc6p1Jq6jhy0dRGB40IxoHCwRcUcvGbsHvOs~5MZuAuNwKkJvBBexRRA-iX~L546d0EZUx0LoRxL4nq6MPfswOb2ViJJsVYI2r7v3pug6OzTIJ97mq2oUf~QDwdiYAF9Csjg~uiVRsEiLPnfxOWczYjnTpU~3wmDXA4PV0qBk~aEwclOUX5Qh7J87RD3LGiv2RRSUPxQettUmNoc7JQhAFXpveJ~gXihuUmI8pmVVUIXLoMxFIX9WBWNx2ebBcqCfie~vJuHs1JJjOzHzkNo~9KMzUt46thqGAQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+          </button>
+          <button class="open-modal flex w-full">
+            <img loading="lazy" class="mt-30 w-full object-cover sm:h-image-5 h-image-0 bg-custom-color-grey"
+              src="https://s3-alpha-sig.figma.com/img/d23c/13bb/0b23a825357426c98af6bc74c90b66a0?Expires=1693180800&Signature=PHIcZitwB12IwI926rsszddq2iAEdfw7FVSrbGcxA25gpL4yAkUvWgUtBTljZU3W9D-w0yz21udXuOdbKlLgDZ8pNGwa-pEh7BsBI79NKS-1VTU0BG75s7WFt-Z83EV9ugA5YQQaxys2AGuSa9FOSryOxLW1ygdznq0zxPPI1awMSrbaWgnJAf97H4Y1YK0ERZ2gwrklruxvUc5rjk3ycMZAIdBhNY4MeW3tNP0uwhwuOsK-vX7txs81np~A4Z5REa~jH8JfrHBgbzrhiS-L1L5PAYxN2hHx9d2eOi68WmcOTdFpe56PcPWzoz1iYQ0LPbLQrDIM6cne5mV2Md10KQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+          </button>
+          <button class="open-modal flex w-full">
+            <img loading="lazy"
+              class="mt-30 w-full object-cover sm:h-image-3 h-image-0 sm:mb-0 mb-[130px] bg-custom-color-grey"
+              src="https://s3-alpha-sig.figma.com/img/e209/1e78/d41f16c4301e5a7dfaeb13b24470a429?Expires=1693180800&Signature=gVCIxGLGbiPPw4kDNByl2~7B45vvjO-WZ~QBrox~JUtKgZnH~GjCLtlUKJcTXaeFWPbdz-wphI1wrAnats2FXR8tJh5VLVIwxJK8TL04p0RJ8Zb~dmKieWyGSvLwzzbLvPnbxADZOwJX-XFIW-TeQqgqZVaT2as9nTDu4pOAUQQTaD6aGTKBRhc~UQqZuXAmv61NDbtcgA4DrL511BF4XZszYP-CZGJbGDVN-lqOKL5zWLMM0VI6UbtOvlzfVxfUwxh0FbYe8nukN63x~3qPQhfcEH8RP~mcldvaZQMUbZId03DJf7NmQBM3WR500rC6l-XD-fA8jpdGXWAPIIsirA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
           </button>
         </div>
       </div>
     </section>
-    
-    <section class="flex flex-col w-full font-montserrat md:text-base text-xs md:text-left text-center relative">
+    <section id="section3"
+      class="flex flex-col w-full font-montserrat md:text-base text-xs md:text-left text-center relative">
       <div
         class="flex mt-10 mb-10 bg-custom-color-green pt-100 pb-100 pl-20 pr-20 md:flex-row flex-col md:items-end items-center md:ml-150 ml-20 md:mr-150 mr-20">
         <div class="flex text-white p-0 md:items-end items-center md:w-3/4 w-full md:justify-start justify-center">
@@ -378,7 +415,7 @@
           <div class="flex flex-col md:mt-0 mt-5 md:items-start items-center">
             <p class="md:items-start items-center">Śledź nasze<br />najnowsze realizacje!</p>
             <button
-              class="flex justify-center rounded-3xl p-2 bg-custom-color-grey w-110-custom mt-5 text-customText">Instagram</button>
+              class="flex justify-center rounded-3xl p-2 bg-custom-color-grey w-110-custom mt-5 text-customText transform hover:bg-transparent border-2 border-customBorderBottom hover:border-white transition duration-300 hover:text-white">Instagram</button>
           </div>
         </div>
       </div>
@@ -391,7 +428,9 @@
         </p>
         <div class="flex items-center md:flex-row flex-col">
           <p class="text-grey mr-5 text-center">Daj znać, co możemy dla Ciebie zrobić!</p>
-          <button class="bg-custom-color-green p-3 rounded-3xl text-white md:m-0 m-5">Skontaktuj się z nami</button>
+          <button
+            class="bg-custom-color-green p-3 rounded-3xl text-white md:m-0 m-5 transform hover:bg-transparent border-2 border-customBorderBottom hover:border-white transition duration-300">Skontaktuj
+            się z nami</button>
         </div>
       </div>
       <div
@@ -467,6 +506,8 @@
   <script src="js/projects.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/scroll.js"></script>
+  <script src="js/parralax.js"></script>
+  <script src="js/spinner.js"></script>
 </body>
 
 </html>

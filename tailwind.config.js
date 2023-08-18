@@ -32,6 +32,7 @@ module.exports = {
         'image-5': '603px',
         'image-main': '700px',
         'cutomGradient': '1000px',
+        'image-full': '1100px',
       },
       margin: {
         '150': '150px',
