@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node app.js",
-    "runserver": "node server.js"
+    "runserver": "node server.js",
+    "build": "tailwindcss build -o src/styles.css"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
