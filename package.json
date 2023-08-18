@@ -4,7 +4,7 @@
   "scripts": {
     "start": "node app.js",
     "runserver": "node server.js",
-    "build": "tailwindcss build -o src/styles.css"
+    "build": "tailwindcss build -o src/styles/tailwind.css"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
