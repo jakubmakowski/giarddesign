@@ -1367,7 +1367,7 @@ video {
 .list-menu {
   display: flex;
   position: absolute;
-  right: -255px;
+  right: 0;
   top: 0;
 }
 
@@ -1415,6 +1415,7 @@ li {
   .list-menu {
     flex-direction: column;
     top: 64px;
+    right: -255px;
     width: 120px;
     height: 330px;
   }
