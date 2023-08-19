@@ -7,7 +7,7 @@ let isToggled = false;
 toggleButton.addEventListener("click", () => {
   isToggled = !isToggled;
   toggleTarget.style.transition = "right 0.3s ease-in-out";
-  toggleTarget.style.right = isToggled ? "0" : "-235px";
+  toggleTarget.style.right = isToggled ? "0" : "-255px";
 });
 
 window.addEventListener("resize", () => {
@@ -15,6 +15,6 @@ window.addEventListener("resize", () => {
     toggleTarget.style.right = "0";
     toggleTarget.style.transition = "right 0s ease-in";
   } else if (!isToggled && window.innerWidth < 800) {
-    toggleTarget.style.right = "-235px";
+    toggleTarget.style.right = "-255px";
   }
 });

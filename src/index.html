@@ -32,19 +32,26 @@
             <span class="font-normal relative right-1">design</span>
           </h1>
         </button>
-        <button class="sm:hidden block absolute right-8 top-5" id="toggleButton">
+        <button class="hamburger absolute right-8 top-5" id="toggleButton">
           <span class="w-6 h-1 bg-black mb-1 block"></span>
           <span class="w-6 h-1 bg-black mb-1 block"></span>
           <span class="w-6 h-1 bg-black mb-1 block"></span>
         </button>
-        <ul id="dropdownList" class="none-cursor absolute top-[63px] left-0 bg-white rounded shadow-md hidden w-full">
-          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Element 1</li>
-          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Element 2</li>
-          <li class="md:ml-80 ml-30 md:mr-80 mr-30 pb-5">Element 3</li>
+        <ul id="dropdownList" class="dropdownList none-cursor absolute top-[64px] left-0 bg-white rounded shadow-md hidden w-full">
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Ogród angielski</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Ogród formalny</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Ogród nowoczesny</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Ogród krajowy</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Ogród orientalny</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Ogród skalny</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Ogród wodny</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Ogród przydomowy</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30">Ogród relaksacyjny</li>
+          <li class="md:ml-80 ml-30 md:mr-80 mr-30 pb-5">Ogród dziki</li>
         </ul>
         <ul id="toggleTarget"
-          class="flex items-center absolute bg-white sm:top-0 top-[64px] sm:right-0 right-[-235px] sm:flex-row flex-col sm:p-0 p-10">
-          <div id="list" class="list-wrapperTwo flex bg-white sm:flex-row flex-col">
+          class="list-menu flex items-center bg-white sm:p-0 p-10">
+          <div id="list" class="list-wrapperTwo bg-white">
             <li id="toggleOffer" class="flex items-center mt-5 z-10 cursor-pointer sm:ml-5 ml-0">
               Oferta
               <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
@@ -59,9 +66,9 @@
             </li>
             <li class="scroll-button mt-5 cursor-pointer sm:ml-5 ml-0 mr-5" data-scroll-to="section2">Kontakt</li>
           </div>
-          <input class="mt-4 cursor-pointer bg-custom-color-grey p-[5px] text-xs" placeholder="Szukaj..."
+          <input class="search mt-4 cursor-pointer bg-custom-color-grey p-[5px] text-xs" placeholder="Szukaj..."
             type="text"></input>
-          <li id="toggleLeft" class="mt-5 md:mr-80 mr-30 cursor-pointer sm:ml-5 ml-0" id="searchIcon">
+          <li id="toggleLeft" class="magnifier mt-5 md:mr-80 mr-30 cursor-pointer sm:ml-5 ml-0" id="searchIcon">
             <svg class="sm:ml-0 ml-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
               fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -133,10 +140,12 @@
                     kompleksowy zakres usług<br />z indywidualnym podejściem do każdego projektu.</p>
                   <div class="flex md:flex-row flex-col mt-10">
                     <button
+                      data-scroll-to="section2"
                       class="scroll-button bg-custom-color-green p-3 rounded-3xl text-white mr-10 md:w-200-custom w-200-custom transform hover:bg-transparent hover:text-customBorderBottom border-2 border-customBorderBottom transition duration-300">Skontaktuj
                       się z nami</button>
                     <button
-                      class="flex justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom transform hover:bg-custom-color-green hover:text-white transition duration-300">Zobacz
+                      data-scroll-to="hiddenOurProjects"
+                      class="scroll-button justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom transform hover:bg-custom-color-green hover:text-white transition duration-300">Zobacz
                       nasze realizacje
                       <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
                         fill="none">
@@ -165,10 +174,12 @@
                     kompleksowy zakres usług<br />z indywidualnym podejściem do każdego projektu.</p>
                   <div class="flex md:flex-row flex-col mt-10">
                     <button
+                      data-scroll-to="section2"
                       class="scroll-button bg-custom-color-green p-3 rounded-3xl text-white mr-10 md:w-200-custom w-200-custom transform hover:bg-transparent hover:text-customBorderBottom border-2 border-customBorderBottom transition duration-300">Skontaktuj
                       się z nami</button>
                     <button
-                      class="flex justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom transform hover:bg-custom-color-green hover:text-white transition duration-300">Zobacz
+                      data-scroll-to="hiddenOurProjects"
+                      class="scroll-button flex justify-center flex items-center p-3 rounded-3xl text-customBorderBottom border-2 border-customBorderBottom md:w-250-custom md:mt-0 mt-5 md:mb-0 mb-20 w-200-custom transform hover:bg-custom-color-green hover:text-white transition duration-300">Zobacz
                       nasze realizacje
                       <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
                         fill="none">
@@ -222,14 +233,12 @@
           <div id="hiddenProjects"
             class="rounded-2xl overflow-hidden max-h-0 transition-max-height duration-1000 bg-custom-color-grey p-0 mt-5">
             <div class="p-5">
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
+              <p>
+                 Z przyjemnością stworzymy dla Ciebie projekt ogrodu, w którym nowoczesny styl 
+                 połączy się z optymalnym wykorzystaniem dostępnej przestrzeni. Nasza koncepcja aranżacji opiera się na elegancji, 
+                 prostocie i funkcjonalności, tworząc harmonijne otoczenie, które zachęca do 
+                 relaksu i spędzania czasu na świeżym powietrzu.
+              </p>
             </div>
           </div>
         </div>
@@ -237,8 +246,7 @@
           class="flex flex-col w-1/3 p-4 bg-white rounded-2xl pt-10 pb-10 md:mb-0 mb-5 md:w-1/3 w-full md:mr-10 mr-0">
           <img class="w-50-custom h-30-custom mb-5" src="./assets/eye.png" loading="lazy" alt="eye"></img>
           <h3 class="font-semibold">Wizualizacje</h3>
-          <p class="mt-1">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej
-            przestrzeni.</p>
+          <p class="mt-1">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
           <button id="textVisualizations" class="flex items-center text-customText mt-10 hover:translate-svg">
             <span class="flex border-b-2 border-customBorderBottom relative mr-1 pb-1">
               <span class="pr-1">Dowiedz się więcej</span>
@@ -253,14 +261,13 @@
           <div id="hiddenVisualizations"
             class=" rounded-2xl overflow-hidden max-h-0 transition-max-height duration-1000 bg-custom-color-grey p-0 mt-5">
             <div class="p-5">
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
+              <p>
+                W rezultacie wirtualnego spaceru będziesz mógł zobaczyć i poczuć swój przyszły ogród 
+                w niemal rzeczywisty sposób, jeszcze przed faktyczną realizacją projektu. To nie tylko ułatwi 
+                Ci dokonanie decyzji, ale także dostarczy Ci emocjonującą wizję, którą będziesz mógł się 
+                podzielić z przyjaciółmi i rodziną. Jesteśmy zainspirowani możliwościami tej technologii i 
+                nie możemy się doczekać, aby Cię zaskoczyć wyjątkowym wirtualnym doświadczeniem.
+             </p>
             </div>
           </div>
         </div>
@@ -269,8 +276,7 @@
             src="https://www.figma.com/file/UWTCsdVS1JC4n6ePx6n8OJ/image/14d1db7b96f1122f83f61a20dc5ce2d136805235"
             alt="stars"></img>
           <h3 class="font-semibold">Realizacje</h3>
-          <p class="mt-1">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej
-            przestrzeni.</p>
+          <p class="mt-1">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
           <button id="textRealizations" class="flex items-center text-customText mt-10 hover:translate-svg">
             <span class="flex border-b-2 border-customBorderBottom relative mr-1 pb-1">
               <span class="pr-1">Dowiedz się więcej</span>
@@ -285,14 +291,12 @@
           <div id="hiddenRealizations"
             class="rounded-2xl overflow-hidden max-h-0 transition-max-height duration-1000 bg-custom-color-grey p-0 mt-5">
             <div class="p-5">
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
-              <p>Treść</p>
+              <p>
+                Tworząc Twój wymarzony ogród, łączymy zaawansowane technologie z artystyczną wizją, aby 
+                stworzyć wyjątkową przestrzeń, która przyniesie Ci radość, relaks i inspirację na 
+                wiele lat do przodu. Jesteśmy gotowi podjąć się tego wyjątkowego zadania i dostarczyć Ci nie 
+                tylko piękny ogród, ale także niezapomniane doświadczenie tworzenia czegoś naprawdę wyjątkowego.
+             </p>
             </div>
           </div>
         </div>
